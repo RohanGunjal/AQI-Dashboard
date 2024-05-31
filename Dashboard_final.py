@@ -193,7 +193,7 @@ def gaugeChart():
         # Create a gauge plot using Plotly
         fig.add_trace(go.Indicator(
             mode="gauge+number",
-            value=last_value,
+            value=abs(last_value),
             # title={'text': f"{pollutant.upper()}"},
             domain={'x': [0, 1], 'y': [0, 1]},
             gauge={'axis': {'range': [0, max(config['range'])]},
